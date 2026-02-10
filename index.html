@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Update EduMocker App</title>
+<title>How to Update EduMocker App</title>
 
 <style>
 body{
@@ -12,68 +12,38 @@ body{
   background:#f2f4f8;
 }
 .container{
-  max-width:500px;
+  max-width:520px;
   margin:auto;
   padding:16px;
 }
 .card{
-  background:#fff;
+  background:#ffffff;
   border-radius:12px;
-  padding:16px;
+  padding:18px;
   box-shadow:0 4px 10px rgba(0,0,0,0.08);
 }
 h2{
   margin-top:0;
-  color:#2196F2;
   text-align:center;
+  color:#2196F2;
 }
 .step{
-  margin:12px 0;
-  padding:10px;
+  margin:14px 0;
+  padding:12px;
   background:#f7f9fc;
-  border-left:4px solid #2196F2;
+  border-left:5px solid #2196F2;
   border-radius:6px;
-  font-size:14px;
-}
-button{
-  width:100%;
-  padding:14px;
-  border:none;
-  border-radius:8px;
-  background:#2196F2;
-  color:#fff;
-  font-size:16px;
-  font-weight:bold;
-  cursor:pointer;
-}
-button:active{
-  transform:scale(0.98);
-}
-.hidden{
-  display:none;
-}
-.loader{
-  text-align:center;
-  margin-top:20px;
-}
-.spinner{
-  width:40px;
-  height:40px;
-  border:4px solid #ddd;
-  border-top:4px solid #2196F2;
-  border-radius:50%;
-  animation:spin 1s linear infinite;
-  margin:auto;
-}
-@keyframes spin{
-  0%{transform:rotate(0deg);}
-  100%{transform:rotate(360deg);}
+  font-size:15px;
+  line-height:1.6;
 }
 .note{
+  margin-top:16px;
   font-size:13px;
   color:#555;
-  margin-top:10px;
-  text-align:center;
+  background:#fff3cd;
+  padding:10px;
+  border-radius:6px;
+  border-left:5px solid #ff9800;
 }
 </style>
 </head>
@@ -81,63 +51,41 @@ button:active{
 <body>
 
 <div class="container">
+  <div class="card">
 
-  <!-- Instruction Page -->
-  <div class="card" id="instructionPage">
-    <h2>How to Update App</h2>
+    <h2>How to Update EduMocker App</h2>
 
-    <div class="step">Step 1: Open <b>Chrome Browser</b>.</div>
-    <div class="step">Step 2: Type and open <b>edumocker.online</b>.</div>
-    <div class="step">Step 3: Tap the <b>menu icon</b> at the <b>top right corner</b>.</div>
-    <div class="step">Step 4: Click on the <b>Update</b> option.</div>
-
-    <button onclick="openUpdatePage()">Go to Update Page</button>
-  </div>
-
-  <!-- Update Page -->
-  <div class="card hidden" id="updatePage">
-    <h2>App Update Available</h2>
-
-    <p style="font-size:14px;text-align:center;">
-      A new version of EduMocker App is available.<br>
-      Click the button below to update.
-    </p>
-
-    <button onclick="startUpdate()">Update Now</button>
-
-    <div class="loader hidden" id="loader">
-      <div class="spinner"></div>
-      <div class="note">Downloading & Installing Update…</div>
+    <div class="step">
+      <b>Step 1:</b> Open <b>Google Chrome Browser</b> on your mobile.
     </div>
-  </div>
 
-  <!-- Success Page -->
-  <div class="card hidden" id="successPage">
-    <h2>Update Completed ✅</h2>
-    <p style="text-align:center;font-size:14px;">
-      Your app has been successfully updated.<br>
-      Please open the app again.
-    </p>
-    <button onclick="location.reload()">Done</button>
-  </div>
+    <div class="step">
+      <b>Step 2:</b> Type and open this website:<br>
+      <b>edumocker.online</b>
+    </div>
 
+    <div class="step">
+      <b>Step 3:</b> After the website opens, tap the <b>menu icon (⋮)</b> present at the <b>top right corner</b>.
+    </div>
+
+    <div class="step">
+      <b>Step 4:</b> From the menu options, click on <b>Update</b>.
+    </div>
+
+    <div class="step">
+      <b>Step 5:</b> A new page will open. Click on the <b>Update</b> option shown on that page.
+    </div>
+
+    <div class="step">
+      <b>Step 6:</b> The download will start automatically and the app will be installed again with the latest version.
+    </div>
+
+    <div class="note">
+      ⚠️ Note: Please ensure you have a stable internet connection while updating the app.
+    </div>
+
+  </div>
 </div>
-
-<script>
-function openUpdatePage(){
-  document.getElementById("instructionPage").classList.add("hidden");
-  document.getElementById("updatePage").classList.remove("hidden");
-}
-
-function startUpdate(){
-  document.getElementById("loader").classList.remove("hidden");
-
-  setTimeout(function(){
-    document.getElementById("updatePage").classList.add("hidden");
-    document.getElementById("successPage").classList.remove("hidden");
-  }, 3000); // simulate download & install
-}
-</script>
 
 </body>
 </html>
