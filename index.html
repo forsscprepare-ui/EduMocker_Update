@@ -1,68 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Update Required</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-body{
-  margin:0;
-  padding:20px;
-  font-family:Arial, Helvetica, sans-serif;
-  background:#eeeeee;
-}
-
-.box{
-  background:#ffffff;
-  border-radius:10px;
-  padding:20px;
-  max-width:350px;
-  margin:80px auto;
-  text-align:center;
-  box-shadow:0 4px 10px rgba(0,0,0,0.2);
-}
-
-h2{
-  margin-top:0;
-  color:#222;
-}
-
-p{
-  font-size:14px;
-  color:#555;
-}
-
-button{
-  margin-top:15px;
-  padding:12px 20px;
-  font-size:16px;
-  background:#2196F3;
-  color:#fff;
-  border:none;
-  border-radius:6px;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>Update App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
+<body style="font-family:Arial; background:#f2f2f2; padding:20px;">
 
-<div class="box">
   <h2>Update Available</h2>
-  <p>Please update the app to continue.</p>
 
-  <button onclick="openUpdate()">Update Now</button>
-</div>
+  <p>Your app version is outdated.</p>
 
-<script>
-function openUpdate(){
-  // Forces external browser (Chrome)
-  window.open(
-    "https://example.com/app_v1.2.apk",
-    "_system"
-  );
-}
-</script>
+  <button onclick="openChrome()"
+    style="
+      padding:15px 25px;
+      font-size:16px;
+      background:#2196F3;
+      color:white;
+      border:none;
+      border-radius:6px;
+    ">
+    Update Now
+  </button>
+
+  <script>
+    function openChrome(){
+      // THIS FORCES EXTERNAL BROWSER
+      window.location.href = "https://www.google.com";
+    }
+  </script>
 
 </body>
 </html>
